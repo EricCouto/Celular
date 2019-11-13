@@ -1,6 +1,7 @@
 package com.example.sensoresacess
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -12,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_sensor1.*
 class sensor1L : AppCompatActivity(), SensorEventListener {
 
     lateinit var manager: SensorManager
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,10 @@ class sensor1L : AppCompatActivity(), SensorEventListener {
             manager.getDefaultSensor(Sensor.TYPE_LIGHT),
             SensorManager.SENSOR_DELAY_NORMAL
         )
+
+        BackAcel.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 
 

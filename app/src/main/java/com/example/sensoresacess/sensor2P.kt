@@ -1,6 +1,7 @@
 package com.example.sensoresacess
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -37,6 +38,9 @@ class sensor2P : AppCompatActivity(), SensorEventListener {
 
         manager.registerListener(this,manager.getDefaultSensor(Sensor.TYPE_PROXIMITY),SensorManager.SENSOR_DELAY_FASTEST)
 
+        BackAcel.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
 
     }
 }

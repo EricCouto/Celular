@@ -4,31 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
     <Button
         android:id="@+id/botaoLuz"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Luz" />
 
     <Button
         android:id="@+id/botaoProxi"
-        android:layout_width="match_parent"
-        android:layout_height="88dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80px"
+        android:layout_marginBottom="100px"
         android:text="Proximidade" />
 
     <Button
         android:id="@+id/botaoAcele"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40px"
+        android:layout_marginBottom="100px"
         android:text="Acelerometro" />
 
     <Button
         android:id="@+id/botaoGiro"
-        android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40px"
+        android:layout_marginBottom="100px"
         android:text="Giro" />
 </LinearLayout>

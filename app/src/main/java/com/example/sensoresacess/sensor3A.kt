@@ -1,6 +1,7 @@
 package com.example.sensoresacess
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -28,12 +29,12 @@ class sensor3A : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sensor3)
 
-
         manager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-
 
         manager.registerListener(this,manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),SensorManager.SENSOR_DELAY_NORMAL)
 
-
+        BackAcel.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 }
